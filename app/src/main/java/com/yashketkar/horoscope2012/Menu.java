@@ -1,4 +1,4 @@
-package com.horoscope2012;
+package com.yashketkar.horoscope2012;
 
 import android.app.Activity;
 import android.content.Intent;

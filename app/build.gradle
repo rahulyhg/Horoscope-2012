@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.1"
 
     defaultConfig {
-        applicationId "com.horoscope2012"
+        applicationId "com.yashketkar.horoscope2012"
         minSdkVersion 10
         targetSdkVersion 24
     }
