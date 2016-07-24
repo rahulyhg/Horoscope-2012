@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Splash!</string>
+    <string name="app_name">Horoscope 2012</string>
+    <string name="go">Go</string>
+    <string name="dob">Enter your Date of Birth:</string>
+    <string name="splash">Splash Image</string>
+
+</resources>
