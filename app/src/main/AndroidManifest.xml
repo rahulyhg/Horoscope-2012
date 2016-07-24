@@ -8,7 +8,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name">
         <activity
-            android:name=".Splash"
+            android:name=".SplashScreenActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,11 +18,11 @@
         </activity>
 
         <activity
-            android:name=".Menu"
+            android:name=".BirthDateChooserActivity"
             android:label="@string/app_name" />
 
         <activity
-            android:name=".Horoscope"
+            android:name=".HoroscopeActivity"
             android:label="@string/app_name" />
     </application>
 
