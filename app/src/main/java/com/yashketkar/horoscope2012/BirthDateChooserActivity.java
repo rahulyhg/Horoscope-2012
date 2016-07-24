@@ -1,23 +1,23 @@
 package com.yashketkar.horoscope2012;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.DatePicker;
 
-public class BirthDateChooserActivity extends Activity implements OnClickListener {
-    /**
-     * Called when the activity is first created.
-     */
-    int dd, mm, yy, sign, spcount = 0;
+public class BirthDateChooserActivity extends AppCompatActivity implements View.OnClickListener{
+
+    int dd, mm, yy, sign;
     DatePicker d;
     Button g;
 
+    /**
+     * Called when the activity is first created.
+     */
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_birthdatechooser);
         g = (Button) findViewById(R.id.buttongo);

@@ -1,19 +1,20 @@
 package com.yashketkar.horoscope2012;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
-public class HoroscopeActivity extends Activity {
+public class HoroscopeActivity extends AppCompatActivity {
+
     String name;
     Intent i;
     TextView txt;
     int sign2;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horoscope);
         i = getIntent();

@@ -1,15 +1,15 @@
 package com.yashketkar.horoscope2012;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class SplashScreenActivity extends Activity {
+public class SplashScreenActivity extends AppCompatActivity {
     /**
      * Called when the activity is first created.
      */
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
         Thread splashThread = new Thread() {
@@ -25,7 +25,7 @@ public class SplashScreenActivity extends Activity {
                     // do nothing
                 } finally {
                     finish();
-                    Intent intent = new Intent(SplashScreenActivity.this, BirthDateChooserActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), BirthDateChooserActivity.class);
                     startActivity(intent);
                 }
             }
