@@ -1,16 +1,16 @@
 package com.yashketkar.horoscope2012;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 
-public class BirthDateChooserActivity extends AppCompatActivity{
+public class BirthDateChooserActivity extends AppCompatActivity {
 
-    int dd, mm, yy, sign;
-    DatePicker birthdatePicker;
+    int dd, mm, sign;
+    DatePicker birthdateDatePicker;
     Button goButton;
 
     /**
@@ -21,14 +21,13 @@ public class BirthDateChooserActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_birthdatechooser);
         setTitle(R.string.activity_birthdatechooser);
-        goButton = (Button) findViewById(R.id.buttongo);
-        birthdatePicker = (DatePicker) findViewById(R.id.datePickerdob);
+        goButton = (Button) findViewById(R.id.goButton);
+        birthdateDatePicker = (DatePicker) findViewById(R.id.birthdateDatePicker);
         goButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dd = birthdatePicker.getDayOfMonth();
-                mm = birthdatePicker.getMonth() + 1;
-                yy = birthdatePicker.getYear();
+                dd = birthdateDatePicker.getDayOfMonth();
+                mm = birthdateDatePicker.getMonth() + 1;
                 switch (mm) {
                     case (1):
                         if (dd > 20) {
@@ -128,7 +127,7 @@ public class BirthDateChooserActivity extends AppCompatActivity{
                         break;
                 }
                 Intent nextScreen = new Intent(getApplicationContext(), HoroscopeActivity.class);
-                nextScreen.putExtra("name", Integer.toString(sign));
+                nextScreen.putExtra("sign", sign);
                 startActivity(nextScreen);
             }
         });

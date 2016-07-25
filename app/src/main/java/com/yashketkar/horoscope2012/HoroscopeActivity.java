@@ -1,14 +1,12 @@
 package com.yashketkar.horoscope2012;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
 public class HoroscopeActivity extends AppCompatActivity {
 
-    String name;
     TextView futureTextView;
     int sign;
 
@@ -16,11 +14,9 @@ public class HoroscopeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horoscope);
-        Intent i = getIntent();
-        name = i.getStringExtra("name");
-        futureTextView = (TextView) findViewById(R.id.textViewfut);
+        futureTextView = (TextView) findViewById(R.id.futureTextView);
         futureTextView.setMovementMethod(new ScrollingMovementMethod());
-        sign = Integer.parseInt(name);
+        sign = getIntent().getIntExtra("sign", 0);
         switch (sign) {
             case 1:
                 futureTextView.setText("Aries Horoscope:\nMembers born under this sign can expect a good year in 2012.Your finances will show great improvement over the coming days. Income will remain steady and you may experience a windfall between May and July of 2012. The time is also good to plan for investment and cash in old funds.\n\nLove life will remain steady and bachelors can expect to get married in 2012. There can be some issues with your partner or spouse due to differences in temperament. But overall family life will remain blissful.");
@@ -47,7 +43,7 @@ public class HoroscopeActivity extends AppCompatActivity {
                 futureTextView.setText("Scorpio Horoscope:\nYour positive streak of this year will continue in 2012. But you would need to be careful about making unnecessary expenses. Invest money only after considering all the possibilities. In family life, try to be more flexible and accommodative. A rigid outlook can spoil family harmony.\n\nThis year is going to be good for unmarried Scorpians. There are higher chances for them to get married. Career will continue to grow and there are also probabilities for promotions and increments. The first half of the year is going to be particularly good for Scorpions");
                 break;
             case 9:
-                futureTextView.setText("Sagittarius Horoscope:\n2012 is going to bring in significant changes in the lives of Sagittarians. You will achieve great success in creative fields. Your professional life will show great dynamism and you will be able to attain new heights in your career. There could be some obstacles in your way during the first half of the year, but you�ll be able to overcome them with flying colors. Avoid unnecessary expenses.\n\nAt the end of the year, some issues may crop up in your relationship. So, you�birthdatePicker need to deal with things carefully.");
+                futureTextView.setText("Sagittarius Horoscope:\n2012 is going to bring in significant changes in the lives of Sagittarians. You will achieve great success in creative fields. Your professional life will show great dynamism and you will be able to attain new heights in your career. There could be some obstacles in your way during the first half of the year, but you�ll be able to overcome them with flying colors. Avoid unnecessary expenses.\n\nAt the end of the year, some issues may crop up in your relationship. So, you�birthdateDatePicker need to deal with things carefully.");
                 break;
             case 10:
                 futureTextView.setText("Capricorn Horoscope:\nBoth 2012 and 2013 are going to the best time for you and the positive streak will continue for the coming 30 years. You will be at your creative best and see all your efforts come true. Your ideas will be rewarded and appreciated. You will find a new vigor which will help you excel in your life. Income will grow.\n\nYour friendship can turn into a love relation. Love may come to you as a surprise and from a person who you haven�t considered earlier.");
@@ -56,7 +52,7 @@ public class HoroscopeActivity extends AppCompatActivity {
                 futureTextView.setText("Aquarius Horoscope:\nAfter stressful 2010 and 2011, 2012 is going to bring in good news for you. You can expect positive changes in your life but you would need to overcome the negative feelings to enjoy that. You can see a significant improvement in your status and social recognition in 2012.\n\nYour career will flourish but you may avoid sudden decisions about changing jobs. There will be many options but you would need to choose the best one carefully.");
                 break;
             case 12:
-                futureTextView.setText("Piscean Horoscope:\nThe year may start slow for the Pisceans. You may face some challenges and hurdles in life this year. Tensions may rise in marital relationship. You may also see a fall in your public image. This will be the time to make your decisions carefully. You�birthdatePicker need to work hard to taste success.\n\nHowever, things will improve from May onwards. You may find new friends and also new relationships.");
+                futureTextView.setText("Piscean Horoscope:\nThe year may start slow for the Pisceans. You may face some challenges and hurdles in life this year. Tensions may rise in marital relationship. You may also see a fall in your public image. This will be the time to make your decisions carefully. You�birthdateDatePicker need to work hard to taste success.\n\nHowever, things will improve from May onwards. You may find new friends and also new relationships.");
                 break;
             default:
                 futureTextView.setText("Sorry you dont have a future.");

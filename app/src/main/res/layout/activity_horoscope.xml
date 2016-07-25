@@ -10,10 +10,10 @@
     tools:context=".HoroscopeActivity">
 
     <TextView
-        android:id="@+id/textViewfut"
+        android:id="@+id/futureTextView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
